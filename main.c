@@ -2,24 +2,10 @@
 #include <stdlib.h>
 #include <string.h>
 
-#define MAX 2500
+#include "aluno.h"
+#include "turma.h"
+
 #define ARQ "alunos.dat"
-
-typedef struct
-{
-    int matricula;
-    char nome[50];
-    float n1;
-    float n2;
-    float n3;
-    float n4;
-    float media;
-} Aluno;
-
-static float media(const Aluno *a)
-{
-    return (a->n1 + a->n2 + a->n3 + a->n4) / 4.0f;
-}
 
 static void limpar_buffer(void)
 {
@@ -203,7 +189,7 @@ static void listar_alunos(const Aluno alunos[], int total)
                alunos[i].n2,
                alunos[i].n3,
                alunos[i].n4,
-               media(&alunos[i]));
+               Aluno_media(&alunos[i]));
     }
 }
 
@@ -324,6 +310,9 @@ static void menu(void)
 
 int main(void)
 {
+    Turma turma = {0}; 
+    Turma_carregar(&turma);
+
     Aluno alunos[MAX];
     int total = 0;
 
