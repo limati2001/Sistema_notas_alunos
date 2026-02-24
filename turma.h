@@ -10,10 +10,10 @@ typedef struct {
     int total;
 } Turma;
 
-void Turma_adicionar(Turma *self);
-void Turma_remover(Turma *self, int matricula);
-void Turma_listar(const Turma *self);
-int  Turma_salvar(const Turma *self);
-int  Turma_carregar(Turma *self);
+//void Turma_adicionar(Turma *self);
+//void Turma_remover(Turma *self, int matricula);
+//void Turma_listar(const Turma *self);
+//int  Turma_salvar(const Turma *self);
+//int  Turma_carregar(Turma *self);
 
 #endif

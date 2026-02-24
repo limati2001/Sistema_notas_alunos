@@ -310,8 +310,8 @@ static void menu(void)
 
 int main(void)
 {
-    Turma turma = {0}; 
-    Turma_carregar(&turma);
+    //Turma turma = {0}; 
+    //Turma_carregar(&turma);
 
     Aluno alunos[MAX];
     int total = 0;
